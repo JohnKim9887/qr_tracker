@@ -1,0 +1,99 @@
+            <View style={styles.row}>
+                {/* Add Project Section */}
+                <View style={styles.panel}>
+                    <Text style={styles.subtitle}>Add Project</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Title"
+                        value={projectData.title}
+                        onChangeText={(text) => setProjectData({ ...projectData, title: text })}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Description"
+                        value={projectData.description}
+                        onChangeText={(text) => setProjectData({ ...projectData, description: text })}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Instructions"
+                        value={projectData.instructions}
+                        onChangeText={(text) => setProjectData({ ...projectData, instructions: text })}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Initial Clue"
+                        value={projectData.initialClue}
+                        onChangeText={(text) => setProjectData({ ...projectData, initialClue: text })}
+                    />
+                    <Button 
+                        title={projectData.homescreenDisplay ? "Hide Homescreen Display" : "Show Homescreen Display"}
+                        onPress={() => toggleBoolean('homescreenDisplay')}
+                    />
+                    <Button 
+                        title={projectData.isPublished ? "Unpublish" : "Publish"}
+                        onPress={() => toggleBoolean('isPublished')}
+                    />
+                    <Button 
+                        title={projectData.participantScoring ? "Disable Scoring" : "Enable Scoring"}
+                        onPress={() => toggleBoolean('participantScoring')}
+                    />
+                    <Button title="Add Project" onPress={handleProjectSubmit} />
+                </View>
+
+                {/* Add Location Section */}
+                <View style={styles.panel}>
+                    <Text style={styles.subtitle}>Add Location</Text>
+                    <TextInput
+                        style={styles.input}
+                        keyboardType="numeric"
+                        placeholder="Project ID"
+                        value={locationData.project_id}
+                        onChangeText={(text) => setLocationData({ ...locationData, project_id: text })}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Location Name"
+                        value={locationData.location_name}
+                        onChangeText={(text) => setLocationData({ ...locationData, location_name: text })}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Location Trigger"
+                        value={locationData.location_trigger}
+                        onChangeText={(text) => setLocationData({ ...locationData, location_trigger: text })}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Location Position"
+                        value={locationData.location_position}
+                        onChangeText={(text) => setLocationData({ ...locationData, location_position: text })}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Location Content"
+                        value={locationData.location_content}
+                        onChangeText={(text) => setLocationData({ ...locationData, location_content: text })}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Extra Data"
+                        value={locationData.extra}
+                        onChangeText={(text) => setLocationData({ ...locationData, extra: text })}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Clue"
+                        value={locationData.clue}
+                        onChangeText={(text) => setLocationData({ ...locationData, clue: text })}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        keyboardType="numeric"
+                        placeholder="Score Points"
+                        value={locationData.score_points.toString()}
+                        onChangeText={(text) => setLocationData({ ...locationData, score_points: Number(text) })}
+                    />
+                    <Button title="Add Location" onPress={handleLocationSubmit} />
+                </View>
+            </View>
