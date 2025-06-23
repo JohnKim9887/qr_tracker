@@ -1,9 +1,22 @@
-<h> Currently the SQL server is offline</h>
+# Currently the SQL Server Is Offline
 
-<h> This was done for UQ comp2410</h>
-<body> The app is used for treasure hunt and pathfinding challenges. The app uses an external SQL server to save and load informations about locations.
-By using user GPS positions, and QR code, the app can track how many and which tag the user has tagged.</body>
-![Alt text](docs/assets/StoryPath.png)
-<body> Title Page.</body>
-![Alt text](docs/assets/DebugMode.png)
-<body> User data can be added though debug panel.</body>
+*This was done for UQ COMP2410*
+
+---
+
+## About the App
+
+This app supports treasure-hunt and pathfinding challenges by using an external SQL Server to save and load information about locations. Using GPS positioning and QR-code scans, it tracks which tags a user has collected.
+
+---
+
+## Screenshots
+
+### Title Page  
+
+![Title Page](docs/assets/StoryPath.png)
+
+### Debug Panel  
+
+The debug panel lets you add or remove user data on the fly.  
+![Debug Panel](docs/assets/DebugMode.png)
